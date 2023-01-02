@@ -7,11 +7,11 @@ def merge_sort(arr)
     sorted_arr = []
     
     until (half_left.length == 0 && half_right.length == 0) do
-        if (half_left.length != 0 && half_right.length == 0)
+        if half_right.length == 0
             half_left.each {|value| sorted_arr << value}
             break
         end
-        if (half_left.length == 0 && half_right.length != 0)
+        if half_left.length == 0
             half_right.each {|value| sorted_arr << value}
             break
         end
